@@ -11,15 +11,24 @@ class PartyAnimal:
         self.x = self.x + 1
         print(self.name, "party count", self.x)
     
-    def __del__(self):
-        print('Im destructured', self.x)
+    # def __del__(self):
+    #     print('Im destructured', self.x)
         
-an = PartyAnimal('sally')
-an.party()
-an.party()
-
-jn = PartyAnimal('Jim')
-jn.party()
+# an = PartyAnimal('sally')
+# jn = PartyAnimal('Jim')
+# an.party()
+# jn.party()
 # an = 42
 # an.party() no se ejecuta 
 # print('an contains', an)
+
+class FootballFan (PartyAnimal):
+    points = 0
+    def touchdown(self):
+        self.points = self.points + 7
+        self.party()
+        print(self.name, 'points ', self.points)
+        
+q = FootballFan('Carlos')
+q.touchdown()
+q.party()
