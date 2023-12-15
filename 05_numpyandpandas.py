@@ -39,3 +39,20 @@ df = pd.DataFrame({
 })
 
 print(df)
+
+g7_pop = pd.Series([35.453 , 63.1523, 78.643, 96.1385])
+# print(g7_pop)
+
+g7_pop.name = 'G7 pupulation in million'
+# print(type(g7_pop.values))
+
+certificates_earned = pd.Series(
+    [8, 2, 5, 6],
+    index=['Tom', 'Kris', 'Ahmad', 'Beau']
+)
+
+# print(certificates_earned)
+
+g7_pop.index = ['Canada', 'France', 'United State', 'Brasil']
+
+print(g7_pop)
