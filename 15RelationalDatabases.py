@@ -10,7 +10,7 @@ import re
 
 def arithmetic_arranger(problems, solve=False):
     if (len(problems) > 5):
-        return "Error: Too many problems."
+        printrint("Error: Too many problems.") 
 
     first = ""
     second = ""
@@ -20,15 +20,15 @@ def arithmetic_arranger(problems, solve=False):
     for problem in problems:
         if (re.search("[^\s0-9.+-]", problem)):
             if (re.search("[/]", problem) or re.search("[*]", problem)):
-                return "Error: Operator must be '+' or '-'."
-            return "Error: Numbers must only contain digits."
+                print( "Error: Operator must be '+' or '-'.")
+            print("Error: Numbers must only contain digits.") 
 
         firstNumber = problem.split(" ")[0]
         operator = problem.split(" ")[1]
         secondNumber = problem.split(" ")[2]
 
         if (len(firstNumber) >= 5 or len(secondNumber) >= 5):
-            return "Error: Numbers cannot be more than four digits."
+            printrint("Error: Numbers cannot be more than four digits.") 
 
         sum = ""
         if (operator == "+"):
@@ -59,7 +59,7 @@ def arithmetic_arranger(problems, solve=False):
         string = first + "\n" + second + "\n" + lines + "\n" + sumx
     else:
         string = first + "\n" + second + "\n" + lines
-    return string
+    print(string) 
     
     
 arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"], True)
