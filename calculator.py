@@ -13,5 +13,5 @@ def calculate(list):
 
 lista = [2,4,6,8,10]
 ls = np.array(lista)
-x1 = ls[0,1,2].mean()
+x1 = ls[[0,1,2]].mean()  #los dobles [] son para indices multiples
 print(x1)
